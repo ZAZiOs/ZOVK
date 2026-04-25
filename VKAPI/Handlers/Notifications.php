@@ -124,7 +124,7 @@ final class Notifications extends VKAPIRequestHandler
                 }
 
                 $res->items[] = $notification->toVkApiStruct();
-                $res->new_lastId = $currentId;
+                $res->next_last_id = $currentId;
 
                 $sxModel = $notification->getModel(1);
                 if (!method_exists($sxModel, "getAvatarUrl")) {
